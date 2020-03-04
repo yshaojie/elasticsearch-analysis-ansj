@@ -8,34 +8,37 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
-    <fileSets>  
+    <fileSets>
         <fileSet>
             <directory>${project.basedir}/config/dic</directory>
-            <outputDirectory>/elasticsearch</outputDirectory>
+            <outputDirectory>/elasticsearch-analysis-ansj</outputDirectory>
+            <directoryMode>0755</directoryMode>
         </fileSet>
         <fileSet>
             <directory>${project.basedir}/config</directory>
-            <outputDirectory>/elasticsearch/config</outputDirectory>
+            <outputDirectory>/elasticsearch-analysis-ansj/config</outputDirectory>
             <excludes>
                 <exclude>**/dic/**</exclude>
             </excludes>
+            <directoryMode>0755</directoryMode>
         </fileSet>
 
         <fileSet>
             <directory>${project.basedir}/src/main/plugin-metadata</directory>
-            <outputDirectory>/elasticsearch</outputDirectory>
+            <outputDirectory>/elasticsearch-analysis-ansj</outputDirectory>
+            <directoryMode>0755</directoryMode>
         </fileSet>
     </fileSets>
     <files>
         <file>
             <source>${project.basedir}/src/main/resources/plugin-descriptor.properties</source>
             <filtered>true</filtered>
-            <outputDirectory>/elasticsearch</outputDirectory>
+            <outputDirectory>/elasticsearch-analysis-ansj</outputDirectory>
         </file>
     </files>
     <dependencySets>
         <dependencySet>
-            <outputDirectory>/elasticsearch</outputDirectory>
+            <outputDirectory>/elasticsearch-analysis-ansj</outputDirectory>
             <useProjectArtifact>true</useProjectArtifact>
             <excludes>
                 <exclude>org.elasticsearch:elasticsearch</exclude>
